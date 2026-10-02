@@ -6,6 +6,7 @@ import 'package:project_flutter/row_column/RowColumnWidget.dart';
 import 'package:project_flutter/row_column/RowWidget.dart';
 import 'package:project_flutter/row_column/RowColumnWidget.dart';
 import 'package:project_flutter/size_expanded_stack/ExpandedWidget.dart';
+import 'package:project_flutter/size_expanded_stack/LatihanEmpat.dart';
 import 'package:project_flutter/size_expanded_stack/LatihanSatu.dart';
 import 'package:project_flutter/size_expanded_stack/LatihanDua.dart';
 import 'package:project_flutter/size_expanded_stack/LatihanTiga.dart';
@@ -24,9 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: LatihanTiga(),
-      ),
+      home: Scaffold(body: LatihanEmpat()),
     );
   }
 }

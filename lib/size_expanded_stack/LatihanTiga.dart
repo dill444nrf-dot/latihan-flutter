@@ -11,7 +11,7 @@ class LatihanTiga extends StatelessWidget {
             gradient: LinearGradient(
               colors: [
                 Color(0xFF6366F1), 
-                Color.fromARGB(255, 132, 171, 235), 
+                Color.fromARGB(255, 149, 187, 248), 
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -42,7 +42,7 @@ class LatihanTiga extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Siti Nurfadilla Hasanah",
+                          "Siti Nurfadilla Hasanah ",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -116,7 +116,7 @@ class LatihanTiga extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      " Siti Nurfadilla Hasanah",
+                      " Belajar Flutter",
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class LatihanTiga extends StatelessWidget {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      "12 RPL 1",
+                      "Ayo Belajar Flutter",
                       style: TextStyle(
                         fontSize: 11,
                         color: Colors.white,
