@@ -1,258 +1,179 @@
 import 'package:flutter/material.dart';
 
 class LatihanEmpat extends StatelessWidget {
+  final List daftarStory = [
+    'Cerita Anda',
+    'fajar_dev',
+    'salsa_xi',
+    'kevin_tech',
+    'nadia_art',
+    'reza_pratama',
+    'clara_v',
+  ];
 
-  // Data highlight cerita
-  final List<String> highlightTitle = [
-    'Holiday',
-    'Food',
-    'Work',
-    'Music',
-    'Cats',
-    'Gaming',
-    'Nature',
+  final List fotoStory = [
+    'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150',
+    'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150',
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150',
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150',
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
+  ];
+
+  final List daftarFeed = [
+    'fajar_dev',
+    'salsa_xi',
+    'komunitas_flutter',
+    'kevin_tech',
+    'nadia_art',
+    'reza_pratama',
+    'clara_v',
+    'sekolah_kreatif',
+    'bayu_coder',
+    'mobile_master',
+  ];
+
+  final List fotoProfilFeed = [
+    'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150',
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
+    'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150',
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150',
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150',
+    'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150',
+    'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150',
+  ];
+
+  final List fotoPostingan = [
+    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600',
+    'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600',
+    'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600',
+    'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600',
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600',
+    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600',
+    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600',
+    'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600',
+    'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600',
+    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600',
+  ];
+
+  final List teksCaption = [
+    'Akhirnya bisa santai sejenak! ☕',
+    'Projek UI selesai tepat waktu 🚀 #flutter',
+    'Tetap semangat meraih impian 💪',
+    'Suasana pagi yang sangat menenangkan 🌿',
+    'Fokus ngoding demi masa depan 💻',
+    'Liburan singkat tapi berkesan ✨',
+    'Bismillah, tantangan baru dimulai',
+    'Momen seru bareng teman-teman 📸',
+    'Latihan membuat tampilan aplikasi di flutter',
+    'Siap untuk materi berikutnya!',
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        title: Row(
-          children: [
-            Text(
-              'xii_rpl_1',
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
-            ),
-            Icon(Icons.keyboard_arrow_down, color: Colors.black),
-          ],
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.add_box_outlined, color: Colors.black),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.menu, color: Colors.black),
-            onPressed: () {},
-          ),
-        ],
+        title: Text('Instagram'),
+        backgroundColor: Colors.blue, // Khas warna tugas awal kuliah/sekolah
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-           
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // Foto Profil dengan Border
-                  Container(
-                    padding: EdgeInsets.all(3),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.grey.shade400, width: 2),
-                    ),
-                    child: CircleAvatar(
-                      radius: 35,
-                      backgroundColor: Colors.grey[200],
-                      child: Icon(Icons.person, size: 40, color: Colors.grey[600]),
-                    ),
-                  ),
-                
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        _buildStatColumn('12', 'Postingan'),
-                        _buildStatColumn('1.2k', 'Pengikut'),
-                        _buildStatColumn('350', 'Mengikuti'),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Siti Nurfadilla Hasanah',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-                  ),
-                  SizedBox(height: 4),
-                  Text('💻 Mobile App Developer'),
-                  Text('📍 Bandung, Indonesia'),
-                  Text(
-                    'github.com/xiirpl1',
-                    style: TextStyle(color: Colors.blue[900], fontWeight: FontWeight.w500),
-                  ),
-                ],
-              ),
-            ),
-
-            SizedBox(height: 12),
-
-            
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(color: Colors.grey.shade300),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: Text(
-                        'Edit profil',
-                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 8),
-                  Expanded(
-                    child: OutlinedButton(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(color: Colors.grey.shade300),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: Text(
-                        'Bagikan profil',
-                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            SizedBox(height: 16),
-
-          
-            Container(
-              height: 95,
+      body: ListView.builder(
+        itemCount: 11, // 1 untuk story di atas, 10 untuk postingan feed
+        itemBuilder: (context, index) {
+          // Jika index 0, kita tampilkan bagian Story horizontal
+          if (index == 0) {
+            return Container(
+              height: 90,
+              color: Colors.grey[200], // Warna abu-abu standar tugas
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.symmetric(horizontal: 12),
-                itemCount: highlightTitle.length,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 6.0),
+                itemCount: daftarStory.length,
+                itemBuilder: (context, i) {
+                  return Container(
+                    margin: EdgeInsets.all(5),
                     child: Column(
                       children: [
-                        Container(
-                          width: 60,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.grey[100],
-                            border: Border.all(color: Colors.grey.shade300),
-                          ),
-                          child: Icon(Icons.favorite_border, color: Colors.grey[700], size: 24),
+                        CircleAvatar(
+                          radius: 25,
+                          backgroundImage: NetworkImage(fotoStory[i]),
                         ),
-                        SizedBox(height: 6),
+                        SizedBox(height: 2),
                         Text(
-                          highlightTitle[index],
-                          style: TextStyle(fontSize: 12),
+                          daftarStory[i],
+                          style: TextStyle(fontSize: 10),
                         ),
                       ],
                     ),
                   );
                 },
               ),
-            ),
+            );
+          }
 
-            SizedBox(height: 10),
+          // Untuk index 1 sampai 10, tampilkan Feed Postingan
+          int dataIndex = index - 1;
 
-          
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(color: Colors.grey.shade300, width: 0.5),
+          return Container(
+            margin: EdgeInsets.symmetric(vertical: 5),
+            color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Header Postingan sederhana
+                ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(fotoProfilFeed[dataIndex]),
+                  ),
+                  title: Text(
+                    daftarFeed[dataIndex],
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                  ),
+                  trailing: Icon(Icons.more_vert, size: 18),
                 ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  IconButton(
-                    icon: Icon(Icons.grid_on_sharp, color: Colors.black),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.movie_outlined, color: Colors.grey),
-                    onPressed: () {},
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.account_box_outlined, color: Colors.grey),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ),
 
-          
-            GridView.builder(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              itemCount: 12,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 2,
-                mainAxisSpacing: 2,
-              ),
-              itemBuilder: (context, index) {
-                return Container(
-                  color: Colors.grey[200],
-                  child: Center(
-                    child: Icon(
-                      Icons.photo,
-                      color: Colors.grey[400],
-                      size: 30,
+                // Gambar Postingan polos tanpa efek loading ribet
+                Image.network(
+                  fotoPostingan[dataIndex],
+                  height: 250,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+
+                // Tombol aksi baris biasa
+                Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(Icons.favorite_border, size: 20),
+                      onPressed: () {},
                     ),
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+                    IconButton(
+                      icon: Icon(Icons.comment, size: 20),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.share, size: 20),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
 
-  // Helper Widget untuk membuat kolom statistik agar kode lebih rapi
-  Widget _buildStatColumn(String number, String label) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          number,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-        ),
-        SizedBox(height: 2),
-        Text(
-          label,
-          style: TextStyle(fontSize: 13, color: Colors.black87),
-        ),
-      ],
+                // Caption teks biasa
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                  child: Text(
+                    '${daftarFeed[dataIndex]} : ${teksCaption[dataIndex]}',
+                    style: TextStyle(fontSize: 12),
+                  ),
+                ),
+                SizedBox(height: 10),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }
