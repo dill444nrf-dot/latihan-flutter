@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:project_flutter/list_gride_view/ArticleDetailScreen.dart';
-import 'package:project_flutter/list_gride_view/ArticleListScreen.dart';
 import 'package:project_flutter/list_gride_view/GridProductPage.dart';
 import 'package:project_flutter/list_gride_view/ListBasic.dart';
-import 'package:project_flutter/list_gride_view/ListViewBuilder.dart';
-import 'package:project_flutter/list_gride_view/ListViewHorizontal.dart';
+import 'package:project_flutter/list_gride_view/ListView.dart';
+import 'package:project_flutter/list_gride_view/listViewBuilder.dart';
 import 'package:project_flutter/pages/about_page.dart';
+import 'package:project_flutter/pages/form_Page.dart';
 import 'package:project_flutter/pages/home_page.dart';
-import 'package:project_flutter/row_column/ColumnWidget.dart';
-import 'package:project_flutter/row_column/Latihan1Column.dart';
 
 class AppRoutes {
   static const home = '/';
   static const about = '/about';
 
   // list
-  static const ListView = '/list-view';
-  static const ListBasic = '/list-basic';
-  static const ListViewBuilder = '/list-builder';
-  static const ListViewHorizontal = '/list-horizontal';
-  static const ListViewSeparated = '/list-separated';
-  static const ListViewWidgetCustom = '/list-custom';
+  static const listBasic = '/list-basic';
+  static const listviewbuilder = '/list-builder';
+  static const listviewhorizontal = '/list-horizontal';
+  static const listviewseparated = '/list-separated';
+  static const listView = '/list-view';
 
   // row & grid
   static const Columnwidget = '/column-widget';
@@ -28,9 +24,17 @@ class AppRoutes {
   static const RowColumnWidget = '/row-column-widget';
   static const gridProduct = '/grid-product-page';
 
+  //form
+  static const formPage = '/form-page';
+
   static Map<String, WidgetBuilder> routes = {
-    home: (context) => const HomePage(),
-    about: (context) => const AboutPage(),
-    gridProduct: (context) => const GridProductPage(),
+    home: (context) => HomePage(),
+    about: (context) => AboutPage(),
+    gridProduct: (context) => GridProductPage(),
+    listView:(context) => Listview(),
+    listBasic:(context) => ListBasic(),
+    listviewbuilder:(context)=> Listviewbuilder(),
+    formPage:(context) => FormPage(),
+
   };
 }

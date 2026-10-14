@@ -76,6 +76,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Masuk Row Column Widget'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/form-page');
+              },
+              child: Text('Masuk Form Page'),
+            ),
           ],
         ),
       ),
